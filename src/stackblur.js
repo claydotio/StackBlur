@@ -82,18 +82,18 @@ function processImage(img, canvas, radius, blurAlphaChannel)
     if (typeof(img) == 'string') {
         var img = document.getElementById(img);
     }
-    else if (!img instanceof HTMLImageElement) {
-        return;
-    }
+    // else if (!img instanceof HTMLImageElement) {
+    //     return;
+    // }
     var w = img.naturalWidth;
     var h = img.naturalHeight;
 
     if (typeof(canvas) == 'string') {
         var canvas = document.getElementById(canvas);
     }
-    else if (!canvas instanceof HTMLCanvasElement) {
-        return;
-    }
+    // else if (!canvas instanceof HTMLCanvasElement) {
+    //     return;
+    // }
 
     canvas.style.width  = w + 'px';
     canvas.style.height = h + 'px';
@@ -116,8 +116,8 @@ function getImageDataFromCanvas(canvas, top_x, top_y, width, height)
 {
     if (typeof(canvas) == 'string')
         var canvas  = document.getElementById(canvas);
-    else if (!canvas instanceof HTMLCanvasElement)
-        return;
+    // else if (!canvas instanceof HTMLCanvasElement)
+    //     return;
 
     var context = canvas.getContext('2d');
     var imageData;
